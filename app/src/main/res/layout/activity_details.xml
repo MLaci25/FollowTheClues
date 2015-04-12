@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Use Of Software"
+        android:id="@+id/textView2"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="23dp"
+        android:text="This is the companion app to the web client Follow The Clues...
+In order to use this software a registered account is required.
+Active GPS and Wi-fi or Mobile network is needed for
+the application to use location services. "
+        android:textStyle="bold"
+        android:id="@+id/textView3"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Proceed"
+        android:id="@+id/button3"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:textStyle="bold" />
+</RelativeLayout>
