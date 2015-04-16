@@ -111,14 +111,22 @@ public class LoginScreen extends Activity
                 values = gson.fromJson(jsonResponse, String[].class);
 
                 int size = values.length;
-                //Toast.makeText(aq.getContext(),"User has authorized access", Toast.LENGTH_LONG).show();
-                startActivity(new Intent(LoginScreen.this, HuntScreen.class));
+
+                if(size > 0)
+                {
+                    startActivity(new Intent(LoginScreen.this, HuntScreen.class));
+                }
+
+                else
+                {
+                    Toast.makeText(aq.getContext(),"User has no authorized access", Toast.LENGTH_LONG).show();
+                }
 
             }
             catch (JSONException e)
             {
                 // TODO Auto-generated catch block
-                Toast.makeText(aq.getContext(), "Invalid or missing user details", Toast.LENGTH_LONG).show();
+                Toast.makeText(aq.getContext(), "Invalid user Name or Password", Toast.LENGTH_LONG).show();
 
             }
             catch (Exception e)
@@ -130,7 +138,7 @@ public class LoginScreen extends Activity
         //When JSON is null
         else
         {
-            /*
+
             //When response code is 500 (Internal Server Error)
             if(status.getCode() == 500)
             {
@@ -144,8 +152,8 @@ public class LoginScreen extends Activity
             //When response code is other than 500 or 404
             else
             {
-                Toast.makeText(aq.getContext(),"Active connection required",Toast.LENGTH_SHORT).show();
-            }*/
+                Toast.makeText(aq.getContext(),"Possible Connection Error",Toast.LENGTH_SHORT).show();
+            }
         }
     }
 }
